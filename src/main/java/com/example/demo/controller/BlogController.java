@@ -26,38 +26,38 @@ public class BlogController {
 	@GetMapping("/all")
 	public List<Blog> getAllBlogs()
 	{
-		return blogService.findAll();//calling methods from BlogService.java
+		return blogService.findAll();//calling delegate methods from BlogService.java
 	}
 	
 	@GetMapping("/title/{title}")
 	public List<Blog> getBlogsByTitle(@PathVariable String title)
 	{
-		return blogService.findByTitle(title);//calling methods from BlogService.java
+		return blogService.findByTitle(title);//calling delegate methods from BlogService.java
 	}
 	
 	@GetMapping("/id/{id}")
 	public Blog getBlogsById(@PathVariable String id)
 	{
-		return blogService.findById(id);//calling methods from BlogService.java
+		return blogService.findById(id);//calling delegate methods from BlogService.java
 	}
 	
 	@PostMapping("/create")
 	public Blog create(@RequestBody Blog blog)
 	{
 		blog.setBlogId(UUID.randomUUID().toString());//UUID is universal unique id, (IMPORTANT:setBlogId is not shown in video)
-		return blogService.create(blog);//calling methods from BlogService.java
+		return blogService.create(blog);//calling delegate methods from BlogService.java
 	}
 	
 	@PutMapping("/update")
 	public Blog update(@RequestBody Blog blog)
 	{		
-		return blogService.update(blog);//calling methods from BlogService.java
+		return blogService.update(blog);//calling delegate methods from BlogService.java
 	}
 
 	@DeleteMapping("delete/{id}")
 	@ResponseStatus(HttpStatus.OK)//HttpStatus tells whether the object is deleted or not
 	public void deleteById(@PathVariable String id)
 	{
-		blogService.delete(id);//calling methods from BlogService.java
+		blogService.delete(id);//calling delegate methods from BlogService.java
 	}
 }

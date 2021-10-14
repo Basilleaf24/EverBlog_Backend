@@ -29,7 +29,7 @@ public class MongoConfiguration extends AbstractMongoClientConfiguration{//overr
 	@Override
 	public MongoClient mongoClient()//overriding mongoclient method
 	{
-		return MongoClients.create();//connecting with mongodb
+		return MongoClients.create();//connecting with mongodb for use(db loading dbdriver details)
 	}
 	
 	@Override

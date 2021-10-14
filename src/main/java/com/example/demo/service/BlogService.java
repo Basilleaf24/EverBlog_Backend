@@ -19,33 +19,33 @@ public class BlogService implements IBlogService{
 	
 	@Override
 	public Blog create(Blog blog) {
-		return blogRepository.save(blog);//service delegate mongodb method
+		return blogRepository.save(blog);//service delegate spring data mongodb method
 	}
 
 	@Override
 	public List<Blog> findByTitle(String title) {
-		return blogRepository.findByTitle(title);//service delegate mongodb method
+		return blogRepository.findByTitle(title);//service delegate spring data mongodb method
 	}
 	
 	@Override
 	public Blog findById(String id) {
-		return blogRepository.findById(id).get();//service delegate mongodb method
+		return blogRepository.findById(id).get();//service delegate spring data mongodb method
 	}
 
 	@Override
 	public List<Blog> findAll() {
-		return blogRepository.findAll();//service delegate mongodb method
+		return blogRepository.findAll();//service delegate spring data mongodb method
 	}
 
 	@Override
 	public void delete(String id) {
-		blogRepository.deleteById(id);//service delegate mongodb method
+		blogRepository.deleteById(id);//service delegate spring data mongodb method
 		
 	}
 
 	@Override
 	public Blog update(Blog blog) {
-		return blogRepository.save(blog);//service delegate mongodb method
+		return blogRepository.save(blog);//service delegate spring data mongodb method
 	}
 	
 
