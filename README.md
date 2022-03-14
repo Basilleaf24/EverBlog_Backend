@@ -9,7 +9,9 @@ Autowire the blog service to the controller.
 
 In application.properties include
   
-  port: 27017
+  port: 27017  
+  
   dbname: BlogDb
+
 
 Add crossorigin in backend so that it listens to outside applications(React application in this case).
